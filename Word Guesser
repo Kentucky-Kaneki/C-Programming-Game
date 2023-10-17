@@ -1,0 +1,233 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+#include<string.h>
+
+void pineapple();
+void apple();
+void hemisphere();
+void spoon();
+void salt();
+void C();
+
+void main(){
+ srand(time(0));
+ int x = 2;
+ printf("You have to guess a random word based on the given clues. \nYou will only get 3 chances. \n");
+ x = rand()%6 + 1;
+ switch(x){
+ case 1:
+    pineapple();
+    return;
+ case 2:
+    apple();
+    return;
+ case 3:
+    hemisphere();
+    return;
+ case 4:
+    spoon();
+    return;
+ case 5:
+    salt();
+    return;
+ case 6:
+    C();
+    return;
+ }
+}
+
+void pineapple(){
+ char word[9] = "pineapple";
+ int count, tries = 1, hint = 0, ask;
+ char input[9];
+ printf("\nClue: A 9 letter yellow fruit that has a green crown.");
+ do{
+    count == 2;
+    if(hint==0){
+        printf("\nDo you want to reveal the first letter? Press 1.\nPress any key if you don't want a clue.");
+        scanf("%d", &ask);
+        fflush(stdin);
+        if(ask == 1){
+            printf("p\nGuess now ");
+            hint = 1;
+        }
+    }
+    scanf("%s", input);
+    fflush(stdin);
+    if(strncmp(word, input, 9)==0){
+        printf("\nCorrect!!!");
+        break;
+    }
+    else if(tries == 3){
+        printf("Oops... try limit exceeded. Correct answer is %s", word);
+        break;
+    }
+    else{
+        printf("\nWrong... Try again.");
+        count = 1;
+        tries++;
+    }
+ }while((count == 1)&&(tries<=3));
+}
+
+void apple(){
+ char word[5] = "apple";
+ int count, tries = 1, hint = 0, ask;
+ char input[9];
+ printf("\nClue: A 5 letter red fruit.");
+ do{
+    count == 2;
+    if(hint==0){
+        printf("\nDo you want to reveal the first letter? Press 1.\nPress any key if you don't want a clue.");
+        scanf("%d", &ask);
+        fflush(stdin);
+        if(ask == 1){
+            printf("a\nGuess now ");
+            hint = 1;
+        }
+    }
+    scanf("%s", input);
+    fflush(stdin);
+    if(strncmp(word, input, 5)==0){
+        printf("\nCorrect!!!");
+        break;
+    }
+    else if(tries == 3){
+        printf("Oops... try limit exceeded. Correct answer is %s", word);
+        break;
+    }
+    else{
+        printf("\nWrong... Try again.");
+        count = 1;
+        tries++;
+    }
+ }while((count == 1)&&(tries<=3));
+}
+
+void hemisphere(){
+ char word[10] = "hemisphere";
+ int count, tries = 1, hint = 0, ask;
+ char input[10];
+ printf("\nClue: A 10 letter shape that describes half of a ball.");
+ do{
+    count == 2;
+    if(hint==0){
+        printf("\nDo you want to reveal the first letter? Press 1.\nPress any key if you don't want a clue.");
+        scanf("%d", &ask);
+        fflush(stdin);
+        if(ask == 1){
+            printf("h\nGuess now");
+            hint = 1;
+        }
+    }
+    scanf("%s", input);
+    fflush(stdin);
+    if(strncmp(word, input, 10)==0){
+        printf("\nCorrect!!!");
+        break;
+    }
+    else if(tries == 3){
+        printf("Oops... try limit exceeded. Correct answer is %s", word);
+        break;
+    }
+    else{
+        printf("\nWrong... Try again.");
+        count = 1;
+        tries++;
+    }
+ }while((count == 1)&&(tries<=3));
+}
+
+void spoon(){
+ char word[5] = "spoon";
+ int count, tries = 1, hint = 0, ask;
+ char input[5];
+ printf("\nClue: A 5 letter object used to drink soup.");
+ do{
+    count == 2;
+    if(hint==0){
+        printf("\nDo you want to reveal the first letter? Press 1.\nPress any key if you don't want a clue.");
+        scanf("%d", &ask);
+        fflush(stdin);
+        if(ask == 1){
+            printf("s\nGuess now ");
+            hint = 1;
+        }
+    }
+    scanf("%s", input);
+    fflush(stdin);
+    if(strncmp(word, input, 5)==0){
+        printf("\nCorrect!!!");
+        break;
+    }
+    else if(tries == 3){
+        printf("Oops... try limit exceeded. Correct answer is %s", word);
+        break;
+    }
+    else{
+        printf("\nWrong... Try again.");
+        count = 1;
+        tries++;
+    }
+ }while((count == 1)&&(tries<=3));
+}
+
+void salt(){
+ char word[4] = "salt";
+ int count, tries = 1, hint = 0, ask;
+ char input[4];
+ printf("\nClue: A 4 letter word that gives taste to every food.");
+ do{
+    count == 2;
+    if(hint==0){
+        printf("\nDo you want to reveal the first letter? Press 1.\nPress any key if you don't want a clue.");
+        scanf("%d", &ask);
+        fflush(stdin);
+        if(ask == 1){
+            printf("s\nGuess now ");
+            hint = 1;
+        }
+    }
+    scanf("%s", input);
+    fflush(stdin);
+    if(strncmp(word, input, 4)==0){
+        printf("\nCorrect!!!");
+        break;
+    }
+    else if(tries == 3){
+        printf("Oops... try limit exceeded. Correct answer is %s", word);
+        break;
+    }
+    else{
+        printf("\nWrong... Try again.");
+        count = 1;
+        tries++;
+    }
+ }while((count == 1)&&(tries<=3));
+}
+
+void C(){
+ char word[1] = "c";
+ int count, tries = 1, hint = 0, ask;
+ char input;
+ printf("\nClue: Single letter. The program used to write this code.");
+ do{
+    count == 2;
+    scanf("%c", &input);
+    fflush(stdin);
+    if((input=='c')||(input=='C')){
+        printf("\nCorrect!!!");
+        break;
+    }
+    else if(tries == 3){
+        printf("Oops... try limit exceeded. Correct answer is %s", word);
+        break;
+    }
+    else{
+        printf("\nWrong... Try again.");
+        count = 1;
+        tries++;
+    }
+ }while((count == 1)&&(tries<=3));
+}
